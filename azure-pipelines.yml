@@ -22,6 +22,10 @@ steps:
     openshiftService: 'cluster2-aro-dev'
     version: 'https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.10/openshift-client-linux.tar.gz'
 
+  - script: |
+      oc status
+      oc whoami --show-server
+
     # connectionType: 'OpenShift Connection Service'
     # openshiftService: 'pytest-dev-sa'
     # cmd: 'status'
