@@ -17,14 +17,14 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: oc-cmd@2
-  inputs:
-    openshiftService: 'cluster2-aro-dev'
-    version: 'https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.10/openshift-client-linux.tar.gz'
+# - task: oc-cmd@2
+#   inputs:
+#     openshiftService: 'cluster2-aro-dev'
+#     version: 'https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.10/openshift-client-linux.tar.gz'
 
-  - script: |
-      oc status
-      oc whoami --show-server
+  # - script: |
+  #     oc status
+  #     oc whoami --show-server
 
     # connectionType: 'OpenShift Connection Service'
     # openshiftService: 'pytest-dev-sa'
