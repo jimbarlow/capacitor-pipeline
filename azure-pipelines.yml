@@ -20,17 +20,18 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: oc-cmd
+- task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
-    version: '4.10.20'
+    # version: '4.10.20'
     cmd: 'status'
-- task: oc-cmd@2
+    uselocalOc: true
+- task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
-    version: '4.10.20'
+    # version: '4.10.20'
     cmd: 'new-project a-jims-project'
     uselocalOc: true
 
