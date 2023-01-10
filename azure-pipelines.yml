@@ -24,14 +24,14 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
-    # version: '4.10.20'
+    version: '4.10.20'
     cmd: 'status'
     uselocalOc: true
 - task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
-    # version: '4.10.20'
+    version: '4.10.20'
     cmd: 'new-project a-jims-project'
     uselocalOc: true
 
