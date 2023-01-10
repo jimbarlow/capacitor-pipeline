@@ -24,27 +24,20 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
-    version: '4.10.20'
     cmd: 'status'
-    uselocalOc: true
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
-    version: '4.10.20'
     cmd: 'new-project a-jims-project'
-    uselocalOc: true
 - task: oc-setup@2
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
     version: 'https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.10/openshift-client-linux.tar.gz'
     
-# - script: |
-#     oc status
-#     oc whoami --show-server
-#     oc new-project a-jims-project
+- script: |
+    oc status
+    oc whoami --show-server
+    oc new-project a-jims-project
 
-    # connectionType: 'OpenShift Connection Service'
-    # openshiftService: 'pytest-dev-sa'
-    # cmd: 'status'
