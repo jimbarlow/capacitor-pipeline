@@ -20,9 +20,9 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-steps2:
-- script: oc whoami --show-server
-  displayName: 'Run a one-line script
+# steps2:
+# - script: oc whoami --show-server
+#   displayName: 'Run a one-line script
 
 - task: oc-cmd@3
   inputs:
