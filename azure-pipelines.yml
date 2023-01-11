@@ -19,7 +19,7 @@ steps:
 #     echo Add other tasks to build, test, and deploy your project.
 #     echo See https://aka.ms/yaml
 #   displayName: 'Run a multi-line script'
-- task: oc-cmd@3
+- task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
@@ -30,7 +30,7 @@ steps:
 #     connectionType: 'OpenShift Connection Service'
 #     openshiftService: 'openshift-aro-cluster-connect'
 #     cmd: 'new-project a-jims-project'
-- task: oc-setup@2
+- task: oc-setup@1.1
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
