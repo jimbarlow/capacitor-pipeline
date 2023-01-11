@@ -20,7 +20,7 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-steps:
+steps2:
 - script: oc whoami --show-server
   displayName: 'Run a one-line script
 
@@ -30,12 +30,12 @@ steps:
     openshiftService: 'openshift-aro-cluster-connect'
     version: '4.10'
     cmd: 'whoami'
-- task: oc-cmd@3
-  inputs:
-    connectionType: 'OpenShift Connection Service'
-    openshiftService: 'openshift-aro-cluster-connect'
-    version: '4.10'
-    cmd: 'whoami --show-server'
+# - task: oc-cmd@3
+#   inputs:
+#     connectionType: 'OpenShift Connection Service'
+#     openshiftService: 'openshift-aro-cluster-connect'
+#     version: '4.10'
+#     cmd: 'whoami --show-server'
 - task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
