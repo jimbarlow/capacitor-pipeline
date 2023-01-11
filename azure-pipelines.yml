@@ -28,7 +28,7 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
-    version: 'v4.10.45'
+#    version: 'v4.10.45'
 #   cmd: 'whoami'
 - task: oc-cmd@3
   inputs:
