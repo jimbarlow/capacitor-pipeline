@@ -24,14 +24,14 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
-    version: 'http://myfatnesspal.com/openshift-client-linux-4.10.46.tar'
+    version: 'https://s3.amazonaws.com/storage.myfatnesspal.com/openshift-client-linux-4.10.46.tar'
 
 
 - task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
-    version: 's3://demo-s3-s3bucket-nk31sv35yh8e/openshift-client-linux-4.10.46.tar'
+    version: 'https://s3.amazonaws.com/storage.myfatnesspal.com/openshift-client-linux-4.10.46.tar'
     cmd: 'whoami --show-server'
 # - task: oc-cmd@3
 #   inputs:
