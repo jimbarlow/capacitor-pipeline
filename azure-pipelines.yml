@@ -21,7 +21,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: oc-cmd@3
   inputs:
-  connectionType: 'OpenShift Connection Service'
+    connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
     version: '4.10'
     cmd: 'whoami'
