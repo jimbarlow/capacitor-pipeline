@@ -19,13 +19,13 @@ steps:
 #     echo Add other tasks to build, test, and deploy your project.
 #     echo See https://aka.ms/yaml
 #   displayName: 'Run a multi-line script'
-- task: oc-cmd@2
-  inputs:
-    connectionType: 'OpenShift Connection Service'
-    openshiftService: 'openshift-aro-cluster-connect'
-    version: 'https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.10/openshift-client-linux.tar.gz'
-    cmd: 'whoami --show-server'
-# - task: oc-cmd@4
+# - task: oc-cmd@2
+#   inputs:
+#     connectionType: 'OpenShift Connection Service'
+#     openshiftService: 'openshift-aro-cluster-connect'
+#     version: 'https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.10/openshift-client-linux.tar.gz'
+#     cmd: 'whoami --show-server'
+# # - task: oc-cmd@4
 #   inputs:
 #     connectionType: 'OpenShift Connection Service'
 #     openshiftService: 'openshift-aro-cluster-connect'
@@ -35,9 +35,9 @@ steps:
 #     connectionType: 'OpenShift Connection Service'
 #     openshiftService: 'openshift-aro-cluster-connect'
 #     version: 'https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.10/openshift-client-linux.tar.gz'
-- script: |
-    sleep 60
-    oc status
-    oc whoami --show-server
-    oc new-project a-jims-project
+# - script: |
+#     sleep 60
+#     oc status
+#     oc whoami --show-server
+#     oc new-project a-jims-project
 
