@@ -40,7 +40,7 @@ steps:
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
-    version: '4.10'
+    version: 'https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.10/openshift-client-linux.tar.gz'
 - script: |
     sleep 60
     oc status
