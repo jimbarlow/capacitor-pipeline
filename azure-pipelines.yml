@@ -24,10 +24,10 @@ steps:
 # - script: oc whoami --show-server
 #   displayName: 'Run a one-line script
 
-- task: oc-setup@3
-  inputs:
-    connectionType: 'OpenShift Connection Service'
-    openshiftService: 'openshift-aro-cluster-connect'
+# - task: oc-setup@3
+#   inputs:
+#     connectionType: 'OpenShift Connection Service'
+#     openshiftService: 'openshift-aro-cluster-connect'
 #    version: 'v4.10.45'
 #   cmd: 'whoami'
 - task: oc-cmd@3
