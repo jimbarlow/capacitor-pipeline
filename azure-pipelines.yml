@@ -25,11 +25,11 @@ steps:
     openshiftService: 'openshift-aro-cluster-connect'
     version: '4.10'
     cmd: 'whoami'
-- task: oc-cmd@2
+- task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
-    version: 'https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.10/openshift-client-linux.tar.gz'
+    version: '4.10'
     cmd: 'whoami --show-server'
 # # - task: oc-cmd@4
 #   inputs:
