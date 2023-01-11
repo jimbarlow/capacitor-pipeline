@@ -12,7 +12,7 @@ trigger:
 pool: capacitor
 
 steps:
-- script: echo Hello, Cynthia!
+- script: echo Hello, World!
   displayName: 'Run a one-line script'
 
 - script: |
