@@ -20,16 +20,13 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-# steps2:
-# - script: oc whoami --show-server
-#   displayName: 'Run a one-line script
+- task: oc-setup@3
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'openshift-aro-cluster-connect'
+   version: 'https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable-4.10/openshift-client-linux.tar.gz'
+  cmd: 'whoami'
 
-# - task: oc-setup@3
-#   inputs:
-#     connectionType: 'OpenShift Connection Service'
-#     openshiftService: 'openshift-aro-cluster-connect'
-#    version: 'v4.10.45'
-#   cmd: 'whoami'
 - task: oc-cmd@3
   inputs:
     connectionType: 'OpenShift Connection Service'
