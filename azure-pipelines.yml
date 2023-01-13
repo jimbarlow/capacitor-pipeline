@@ -43,5 +43,5 @@ steps:
     sleep 60
     oc status
     oc whoami --show-server
-   ` oc new-project a-jims-project
+    oc new-project a-jims-project
 
