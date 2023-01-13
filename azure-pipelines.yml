@@ -20,20 +20,20 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-- task: oc-setup@3
-  inputs:
-    connectionType: 'OpenShift Connection Service'
-    openshiftService: 'openshift-aro-cluster-connect'
-    version: 'https://s3.amazonaws.com/storage.myfatnesspal.com/openshift-client-linux-4.10.46.tar'
-    # version: '4.10.46'
+# - task: oc-setup@3
+#   inputs:
+#     connectionType: 'OpenShift Connection Service'
+#     openshiftService: 'openshift-aro-cluster-connect'
+#     version: 'https://s3.amazonaws.com/storage.myfatnesspal.com/openshift-client-linux-4.10.46.tar'
+#     # version: '4.10.46'
 
-- task: oc-cmd@3
-  inputs:
-    connectionType: 'OpenShift Connection Service'
-    openshiftService: 'openshift-aro-cluster-connect'
-    version: 'https://s3.amazonaws.com/storage.myfatnesspal.com/openshift-client-linux-4.10.46.tar'
-    # version: '4.10.46'
-    cmd: 'whoami --show-server'
+# - task: oc-cmd@3
+#   inputs:
+#     connectionType: 'OpenShift Connection Service'
+#     openshiftService: 'openshift-aro-cluster-connect'
+#     version: 'https://s3.amazonaws.com/storage.myfatnesspal.com/openshift-client-linux-4.10.46.tar'
+#     # version: '4.10.46'
+#     cmd: 'whoami --show-server'
 # - task: oc-cmd@3
 #   inputs:
 #     connectionType: 'OpenShift Connection Service'
@@ -41,7 +41,7 @@ steps:
 #     version: 'https://s3.amazonaws.com/storage.myfatnesspal.com/openshift-client-linux-4.10.46.tar'
 #     cmd: 'new-project a-jims-project'
 - script: |
-    sleep 60
+    sleep 20
     oc status
     oc whoami --show-server
     oc new-project a-jims-project
