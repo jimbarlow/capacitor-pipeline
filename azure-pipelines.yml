@@ -43,7 +43,7 @@ steps:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-aro-cluster-connect'
     version: 'https://s3.amazonaws.com/storage.myfatnesspal.com/openshift-client-linux-4.10.46.tar'
-    cmd: 'new-project ${{ project_name }}'
+    cmd: 'new-project ${{ parameters.project_name }}'
 - script: |
     sleep 20
     oc status
